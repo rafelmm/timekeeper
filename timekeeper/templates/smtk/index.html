@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %}Current Sprint{% endblock %}
+
+{% block content %}
+	<h2>Current Sprint: {{sprint.orderNumber}}</h2>
+	<p>Start date: {{sprint.startDate}}</p>
+	<p>End date: {{sprint.endDate}}</p>
+	
+	<h3>Story List</h3>
+	
+	{% for story in stories %}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<a href="{% url 'smtk:story' story.id%}">{{ story.name }}</a>
+				<a href="#" class="toggle_collapse"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a>
+			</div>
+			<div class="panel-body" style="display:none">
+				<h4>Description</h4>
+				<p>{{ story.description}}</p>
+				<h4>Task List</h4>
+				<ul>
+				{% for task in story.tasks %}
+					<li>{{task.name}} - {{task.description}}</li>
+				{% endfor %}
+				</ul>
+			</div>
+		</div>
+		
+	{% endfor %}
+	
+{% endblock %}

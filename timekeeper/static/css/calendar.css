@@ -1,0 +1,97 @@
+	
+.calendar-wrapper .calendar-col-1, .calendar-wrapper .calendar-col-5, .calendar-wrapper .calendar-col-7{
+	float:left;
+}
+.calendar-wrapper .calendar-col-1{
+	width:14.28%;
+}
+.calendar-wrapper .calendar-col-5{
+	width:71.4%;
+}
+.calendar-wrapper .calendar-col-7{
+	width:100%;
+}
+
+.calendar-wrapper .calendar-header > div{
+	padding: 5px 0;
+	background-color:#ddd;
+}
+.calendar-wrapper #calendar-previous{
+	text-align:left;
+}
+.calendar-wrapper #calendar-previous > span{
+	left:8px;
+}
+.calendar-wrapper #calendar-next{
+	text-align:right;
+}
+.calendar-wrapper #calendar-next > span{
+	right:8px;
+}
+.calendar-wrapper .calendar-month {
+	text-align: center;
+}
+
+.calendar-wrapper .calendar-weekdays > div{
+	text-align: center;
+	padding:5px 0;
+	background-color:#ddd;
+}
+
+.calendar-wrapper .calendar-days > .row > div{
+	padding:10px 0;
+	border-top: 1px solid #aaa;
+	border-left:1px solid #aaa;
+	text-align: center;
+	cursor:pointer;
+}
+.calendar-wrapper .calendar-days > .row > div.today {
+	font-weight:bold;
+	border:1px solid black;
+	padding-bottom:9px;
+}
+
+.calendar-wrapper .calendar-days >.row:last-child div{
+	border-bottom:1px solid #aaa;
+}
+.calendar-wrapper .calendar-days > .row > div:last-child{
+	border-right:1px solid #aaa;
+}
+
+.calendar-wrapper .closed {
+	color:#999;
+	background-color:#e8e8e8;
+}
+.calendar-wrapper .completed {
+	background-color:#73de9e;
+}
+.calendar-wrapper .current {
+	background-color:#f74552;
+}
+.calendar-wrapper .noworkingday{
+	background-color:#ddd;
+}
+
+.calendar-wrapper .calendar-legend {
+	margin-bottom:20px;
+}
+.calendar-wrapper .calendar-legend h4{
+	font-size:1em;
+}
+.calendar-wrapper .calendar-legend-item{
+	float:left;
+	margin-right:15px;
+}
+.calendar-wrapper .calendar-legend-item > div{
+	width:0.8em;
+	height:0.8em;
+	border:1px solid #aaa;
+	float:left;
+	margin-right:2px;
+	margin-top:3px;
+}
+.calendar-wrapper .calendar-legend-item > span{
+	float:left;
+	font-size:0.8em;
+}
+

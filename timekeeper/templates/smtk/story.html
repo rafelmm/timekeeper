@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block head_title %}Story{% endblock %}
+
+{% block content %}
+<h2>{{ story.name }}</h2>
+<p>{{story.description}}</p>
+
+<h3>Task List</h3>
+
+<ul>
+{% for task in tasks %}
+	<li><a href="{% url 'smtk:task' task.id%}">{{ task.name }}</a></li>
+{% endfor %}
+</ul>
+	
+	
+<a href="{%url 'smtk:index' %}">Back</a>
+
+{% endblock %}
